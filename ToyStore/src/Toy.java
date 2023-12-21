@@ -3,6 +3,7 @@ public class Toy implements Comparable<Toy> {
     private final int id;
     private final String name;
     private int rate;
+    
     public Toy(String name, int rate) {
         this.id = counter;
         this.name = name;
