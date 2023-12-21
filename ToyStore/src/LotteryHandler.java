@@ -7,20 +7,13 @@ public class LotteryHandler {
     Queue<Toy> toyQueue = new PriorityQueue<>(Toy::compareTo);
 
     public void addToys() {
-        toyQueue.add(new Toy("Конструктор", 2));
-        toyQueue.add(new Toy("Машина", 7));
+        toyQueue.add(new Toy("Конструктор", 3));
+        toyQueue.add(new Toy("Машина", 5));
         toyQueue.add(new Toy( "Кукла", 2));
     }
 
     public void addToy(String name, int rate) {
         toyQueue.add(new Toy(name, rate));
-    }
-
-    public void showAllToys() {
-        for (Toy toy :
-                toyQueue) {
-            System.out.println(toy);
-        }
     }
 
     public List<Toy> getToys() {
@@ -29,6 +22,7 @@ public class LotteryHandler {
         for (int i = 0; i < 10; i++) {
             Toy toy = toyQueue.poll();
             toys.add(toy);
+            assert toy != null;
             toy.lowerRate();
             toyQueue.add(toy);
         }

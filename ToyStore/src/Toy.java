@@ -1,7 +1,3 @@
-import com.sun.source.tree.ReturnTree;
-
-import java.util.Comparator;
-
 public class Toy implements Comparable<Toy> {
     private static int counter = 1;
     private final int id;
@@ -17,14 +13,6 @@ public class Toy implements Comparable<Toy> {
 
     public int getRate() {
         return rate;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
     }
 
     public void lowerRate() {
