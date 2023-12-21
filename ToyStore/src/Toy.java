@@ -1,3 +1,5 @@
+import com.sun.source.tree.ReturnTree;
+
 public class Toy {
     private String id;
     private String name;
@@ -6,5 +8,9 @@ public class Toy {
         this.id = id;
         this.name = name;
         this.rate = rate;
+    }
+
+    public int getRate() {
+        return rate;
     }
 }
